@@ -1,0 +1,74 @@
+<div class="welcome-section glass-card">
+  <div class="welcome-content">
+    <h1 class="gradient-text">Welcome back, Admin</h1>
+    <p>Manage your workforce, monitor departmental performance, and track employee growth all in one place.</p>
+    <div class="quick-actions">
+      <button mat-raised-button color="primary" [routerLink]="['/employee/new']">
+        <mat-icon>person_add</mat-icon> Quick Add Employee
+      </button>
+      <button mat-stroked-button color="accent" [routerLink]="['/employees']">
+        <mat-icon>list</mat-icon> View Full Directory
+      </button>
+    </div>
+  </div>
+  <div class="welcome-image">
+    <img src="/hero.png" alt="Dashboard illustration">
+  </div>
+</div>
+
+<div class="stats-grid">
+  <mat-card class="stat-card">
+    <mat-card-content>
+      <div class="stat-icon employees">
+        <mat-icon>group</mat-icon>
+      </div>
+      <div class="stat-info">
+        <h3 class="stat-label">Total Employees</h3>
+        <p class="stat-value">{{ totalEmployees$ | async }}</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="stat-card">
+    <mat-card-content>
+      <div class="stat-icon active">
+        <mat-icon>check_circle</mat-icon>
+      </div>
+      <div class="stat-info">
+        <h3 class="stat-label">Active Employees</h3>
+        <p class="stat-value">{{ activeEmployees$ | async }}</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="stat-card">
+    <mat-card-content>
+      <div class="stat-icon departments">
+        <mat-icon>business</mat-icon>
+      </div>
+      <div class="stat-info">
+        <h3 class="stat-label">Departments</h3>
+        <p class="stat-value">{{ departmentsCount$ | async }}</p>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
+
+<div class="recent-activity">
+  <h2 class="section-title">Quick Overview</h2>
+  <div class="activity-grid">
+    <div class="activity-card glass-card">
+      <h3>Recent Hires</h3>
+      <div class="activity-list">
+        <div class="activity-item">
+          <div class="avatar-small">JD</div>
+          <div class="item-text">
+            <strong>John Doe</strong> joined as Software Engineer
+            <span class="item-time">2 hours ago</span>
+          </div>
+        </div>
+        <!-- Add more if needed or use dynamic data from a new recent-hires service -->
+      </div>
+    </div>
+  </div>
+</div>

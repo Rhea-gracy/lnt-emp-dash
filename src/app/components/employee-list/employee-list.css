@@ -1,0 +1,117 @@
+.list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.actions-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.search-field {
+  min-width: 300px;
+}
+
+.search-field .mat-mdc-form-field-wrapper {
+  padding-bottom: 0;
+}
+
+.add-btn {
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  padding: 0.5rem 1.5rem !important;
+}
+
+.table-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02) !important;
+}
+
+table {
+  width: 100%;
+}
+
+.row-hover:hover {
+  background-color: #f8fafc !important;
+  cursor: pointer;
+}
+
+.user-cell {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 0;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-color: #f1f5f9;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.user-email {
+  font-size: 0.8125rem;
+  color: var(--text-secondary);
+}
+
+.department-badge {
+  background: #f1f5f9;
+  color: #475569;
+  padding: 0.25rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.status-active .mdc-chip__text-label { color: #10b981 !important; }
+.status-leave .mdc-chip__text-label { color: #f59e0b !important; }
+.status-inactive .mdc-chip__text-label { color: #ef4444 !important; }
+
+.no-data-row td {
+  text-align: center;
+  padding: 4rem 0;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .header-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .actions-group {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .search-field {
+    min-width: 100%;
+  }
+}
